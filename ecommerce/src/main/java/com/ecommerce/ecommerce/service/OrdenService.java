@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.ecommerce.ecommerce.DTO.OrdenResponseDTO;
 import com.ecommerce.ecommerce.mapper.OrdenMapper;
 import com.ecommerce.ecommerce.model.Carrito;
@@ -13,6 +15,10 @@ import com.ecommerce.ecommerce.model.OrdenItem;
 import com.ecommerce.ecommerce.repository.CarritoRepository;
 import com.ecommerce.ecommerce.repository.OrdenRepository;
 
+import org.springframework.transaction.annotation.Transactional;
+
+@Service
+@Transactional
 public class OrdenService {
     
     private final OrdenRepository repoOrden;
